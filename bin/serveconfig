@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/sh
 cd /etc/openvpn
 
 # This is a very crude hack to help with race conditions, when starting
