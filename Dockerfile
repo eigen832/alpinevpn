@@ -1,6 +1,6 @@
 FROM alpine
-RUN apk update && \
-    apk add openssl openvpn iptables curl
+RUN apk --no-cache add openssl openvpn iptables socat curl
 ADD ./bin /sbin
-EXPOSE 1194/udp
+VOLUME /etc/openvpn
+EXPOSE 443/tcp 1194/udp 8080/tcp
 CMD run
